@@ -9,7 +9,6 @@ import {
   Group,
   Checkbox,
   ActionIcon,
-  useMantineTheme,
 } from "@mantine/core";
 import { IconTrash } from "@tabler/icons-react";
 import { LoremIpsum } from "lorem-ipsum";
