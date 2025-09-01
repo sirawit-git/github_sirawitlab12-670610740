@@ -91,11 +91,13 @@ export default function HomePage() {
       <Stack align="center">
         <Title order={2}>Todo List</Title>
         <Text size="sm" c="dimmed">
+          
           All : {tasks.length} | Done : {tasks.filter((t) => t.isDone).length}
         </Text>
         {/* เพิ่ม Task */}
-        <Button onClick={handleAdd}>Add Task</Button>
-        {/* แสดง Task Cards */}
+        <Button onClick={handleAdd} variant="filled" color="cyan" >Add Task </Button>
+
+         {/* แสดง Task Cards */}
         <Stack w="100%">
           {tasks.map((task) => (
             <Card withBorder shadow="sm" radius="md" mb="sm" key={task.id}>
@@ -118,7 +120,7 @@ export default function HomePage() {
                     </Text>
                   )}
                   {task.isDone && task.doneAt && (
-                    <Text size="xs" c="gray">
+                    <Text size="xs" c="Champ">
                       Done at: {task.doneAt.toLocaleString()}
                     </Text>
                   )}
@@ -128,6 +130,8 @@ export default function HomePage() {
                   <Checkbox
                     checked={task.isDone}
                     onChange={() => toggleDoneTask(task.id)}
+                    label = "Done"
+                    color="cyan"
                   />
                   <ActionIcon
                     color="red"

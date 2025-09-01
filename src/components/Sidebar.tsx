@@ -43,8 +43,14 @@ export default function Sidebar() {
       </Box>
       {/* แสดงผู้ใช้งาน */}
       <Box p={10}>
-        <Text>Sirawit_champ</Text>
+        <Group>
+        <Indicator color="green" processing>
+            <Avatar src="/pics7.jpg" radius="xl" />
+          </Indicator>
+        <Text>Champ</Text>
+        </Group>
       </Box>
     </Stack>
   );
 }
+
